@@ -1,4 +1,4 @@
-package com.example.firstkotlin
+package com.example.firstkotlin.Activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import com.example.firstkotlin.R
 
 class MainActivity : AppCompatActivity() {
     private var count = 0
@@ -22,7 +23,6 @@ class MainActivity : AppCompatActivity() {
 
 
         textView = findViewById<TextView>(R.id.textView).apply {
-
             text = "The value is :$count"
         }
 
@@ -32,14 +32,17 @@ class MainActivity : AppCompatActivity() {
                 textView?.text = "The value is: $count"
             }
         }
-
         buttonGoSecond = findViewById<Button>(R.id.button2).apply {
             setOnClickListener {
                 startActivity(Intent(context, SecondActivity::class.java))
             }
         }
 
-
+        findViewById<Button>(R.id.buttonForListWorkshop).apply {
+            setOnClickListener {
+                startActivity(Intent(context, ListWorkshopActivity::class.java))
+            }
+        }
     }
 
     override fun onSaveInstanceState(outState: Bundle) {

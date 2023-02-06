@@ -1,4 +1,4 @@
-package com.example.firstkotlin
+package com.example.firstkotlin.Fragment
 
 import android.content.Context
 import android.os.Bundle
@@ -8,11 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import com.example.firstkotlin.FragmentClickListener
+import com.example.firstkotlin.R
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+private const val ARG_PARAM_1 = "param1"
+private const val ARG_PARAM_2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -28,8 +30,8 @@ class SecondFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+            param1 = it.getString(ARG_PARAM_1)
+            param2 = it.getString(ARG_PARAM_2)
         }
     }
 
@@ -40,7 +42,7 @@ class SecondFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_second, container, false)
         view.findViewById<TextView>(R.id.text)?.apply {
-            text = arguments?.getString(ARG_PARAM1)
+            text = arguments?.getString(ARG_PARAM_1)
         }
         view.findViewById<Button>(R.id.button3).apply {
             setOnClickListener {
@@ -76,8 +78,8 @@ class SecondFragment : Fragment() {
         fun newInstance(param1: String, param2: String) =
             SecondFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+                    putString(ARG_PARAM_1, param1)
+                    putString(ARG_PARAM_2, param2)
                 }
             }
     }

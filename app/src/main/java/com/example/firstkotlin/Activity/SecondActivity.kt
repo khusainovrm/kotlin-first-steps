@@ -1,14 +1,16 @@
-package com.example.firstkotlin
+package com.example.firstkotlin.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
+import com.example.firstkotlin.FragmentClickListener
+import com.example.firstkotlin.R
+import com.example.firstkotlin.Fragment.SecondFragment
 
 class SecondActivity : AppCompatActivity(), FragmentClickListener {
     private val colors: Array<Int> = arrayOf(
-        R.color.black, R.color.purple_500, R.color.teal_200, R
-            .color.teal_700
+        R.color.black, R.color.purple_500, R.color.teal_200, R.color.teal_700
     )
     private var secondFragment: SecondFragment? = null
 
