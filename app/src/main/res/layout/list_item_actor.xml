@@ -8,29 +8,26 @@
 
     <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="395dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 tools:srcCompat="@tools:sample/avatars"
-                android:id="@+id/actorImage"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp" />
+                android:id="@+id/actorImage" />
 
         <TextView
-                android:layout_width="136dp"
+                android:layout_width="210dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/actorName"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_gravity="center"
-                android:textSize="16sp"
+                android:textSize="24sp"
                 android:textStyle="bold" />
 
         <Space
@@ -39,12 +36,10 @@
                 android:layout_weight="1" />
 
         <ImageView
-                android:layout_width="87dp"
-                android:layout_height="114dp"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
                 app:srcCompat="@drawable/oscar"
                 android:id="@+id/oscarImage"
-                android:layout_marginEnd="8dp"
-                android:layout_marginTop="8dp"
                 android:layout_gravity="center" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
